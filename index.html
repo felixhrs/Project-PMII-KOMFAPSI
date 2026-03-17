@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMII Komfapsi - Portal Interaktif</title>
+    <style>
+        /* === CSS DASAR === */
+        :root {
+            --primary: #004b87;
+            --secondary: #f1c40f;
+            --bg-body: #f4f7f6;
+            --bg-card: #ffffff;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border: #e0e0e0;
+            --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background: var(--bg-body); color: var(--text-main); line-height: 1.6; }
+        
+        /* === NAVIGASI === */
+        header {
+            position: fixed; top: 0; width: 100%; background: var(--bg-card);
+            padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1); z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .logo span { color: var(--secondary); }
+        
+        /* === LAYOUT UTAMA === */
+        .container { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem 2rem 2rem; }
+        .hero-banner {
+            background: linear-gradient(135deg, var(--primary), #002244);
+            color: white; padding: 4rem 2rem; border-radius: 15px; text-align: center; margin-bottom: 3rem;
+        }
+        .hero-banner h1 { color: var(--secondary); margin-bottom: 1rem; }
+        
+        .btn { display: inline-block; padding: 12px 25px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; transition: var(--transition); }
+        .btn-primary { background: var(--secondary); color: var(--primary); }
+        .btn-primary:hover { background: white; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+        .btn-outline:hover { background: var(--primary); color: white; }
+
+        /* === KARTU KONTEN === */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .card { background: var(--bg-card); padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PMII <span>KOMFAPSI</span></div>
+    </header>
+
+    <div class="container">
+        <div class="hero-banner">
+            <h1>Sistem Informasi Kaderisasi</h1>
+            <p>Digitalisasi pendataan dan rekrutmen kader PMII Fakultas Psikologi.</p>
+        </div>
+
+        <h2 style="color: var(--primary); border-bottom: 3px solid var(--secondary); display: inline-block;">Profil & Organisasi</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Visi Pergerakan</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Menggabungkan nilai-nilai Dzikir, Fikir, dan Amal Sholeh dengan kemajuan teknologi informasi.</p>
+                <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+            </div>
+            
+            <div class="card" style="border: 2px solid var(--secondary);">
+                <h3>Struktur Kepengurusan</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Kenali lebih dekat jajaran pengurus Komisariat Fakultas Psikologi masa khidmat ini.</p>
+                <a href="struktur.html" target="_blank" class="btn btn-outline">Lihat Bagan Struktur &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
