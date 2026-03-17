@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Pengurus - PMII Komfapsi</title>
+    <style>
+        :root {
+            --primary: #004b87;
+            --secondary: #f1c40f;
+            --bg-body: #f8f9fa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-body); padding-bottom: 5rem; }
+
+        /* === HEADER SEDERHANA === */
+        .header-struktur {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header-struktur h1 { color: var(--secondary); font-size: 2.5rem; margin-bottom: 10px; }
+        
+        .btn-back {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 1px solid white;
+            transition: 0.3s;
+        }
+        .btn-back:hover { background: white; color: var(--primary); }
+
+        /* === BAGAN ORGANISASI (HIERARKI) === */
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        /* Kotak Nama Pengurus */
+        .box {
+            background: white;
+            border-top: 5px solid var(--secondary);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+            transition: 0.3s;
+        }
+        .box:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        
+        .jabatan { font-size: 0.9rem; color: var(--primary); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .nama { font-size: 1.2rem; font-weight: 700; color: #333; }
+        .jurusan { font-size: 0.8rem; color: #777; margin-top: 5px; font-style: italic; }
+
+        /* Garis Penghubung */
+        .line-vertical { width: 2px; height: 30px; background-color: var(--primary); margin: 0 auto; }
+        .line-horizontal { width: 600px; height: 2px; background-color: var(--primary); margin: 0 auto; }
+
+        /* Baris BPH (Sekretaris & Bendahara) */
+        .bph-row { display: flex; justify-content: center; gap: 4rem; position: relative; }
+        
+        /* Baris Biro/Lembaga */
+        .biro-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 1rem; max-width: 1000px; }
+        .biro-box { width: 220px; border-top: 5px solid var(--primary); }
+
+        /* Garis dari BPH ke Biro */
+        .connector-wrapper { text-align: center; width: 100%; }
+
+        @media (max-width: 768px) {
+            .line-horizontal { width: 300px; }
+            .bph-row { gap: 2rem; }
+            .biro-row { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-struktur">
+        <h1>Struktur Kepengurusan</h1>
+        <p>PMII Komisariat Fakultas Psikologi</p>
+        <p>Masa Khidmat 2025-2026</p>
+        <a href="index.html" class="btn-back">&larr; Kembali ke Beranda</a>
+    </div>
+
+    <div class="org-chart">
+        
+        <div class="box">
+            <div class="jabatan">Ketua Komisariat</div>
+            <div class="nama">Sahabat Felix</div>
+            <div class="jurusan">Fakultas Psikologi</div>
+        </div>
+
+        <div class="line-vertical"></div>
+
+        <div class="connector-wrapper">
+            <div class="line-horizontal"></div>
+            <div style="display: flex; justify-content: space-between; width: 600px; margin: 0 auto;">
+                <div class="line-vertical" style="margin: 0;"></div>
+                <div class="line-vertical" style="margin: 0;"></div>
+            </div>
+        </div>
+
+        <div class="bph-row">
+            <div class="box">
+                <div class="jabatan">Sekretaris</div>
+                <div class="nama">Sahabati Nisa</div>
+                <div class="jurusan">Fakultas Psikologi</div>
+            </div>
+            <div class="box">
+                <div class="jabatan">Bendahara</div>
+                <div class="nama">Sahabati Dinda</div>
+                <div class="jurusan">Fakultas Psikologi</div>
+            </div>
+        </div>
+
+        <div class="line-vertical" style="height: 40px;"></div>
+
+        <div class="connector-wrapper">
+            <div class="line-horizontal" style="width: 80%; max-width: 800px;"></div>
+        </div>
+
+        <div class="biro-row">
+            <div class="box biro-box">
+                <div class="jabatan">Biro Kaderisasi</div>
+                <div class="nama">Sahabat Rian</div>
+            </div>
+            <div class="box biro-box">
+                <div class="jabatan">Biro Kajian Psikologi</div>
+                <div class="nama">Sahabati Farah</div>
+            </div>
+            <div class="box biro-box">
+                <div class="jabatan">Biro Keagamaan</div>
+                <div class="nama">Sahabat Ilham</div>
+            </div>
+            <div class="box biro-box">
+                <div class="jabatan">Biro Media & IT</div>
+                <div class="nama">Sahabat Reza</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
